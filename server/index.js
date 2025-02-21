@@ -1,6 +1,7 @@
 // create a basic node js with express app
 const express = require('express');
-require('dotenv');
+require('dotenv').config();
+
 const { Client, RemoteAuth } = require('whatsapp-web.js');
 const app = express();
 const port = 3001;
