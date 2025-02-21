@@ -7,8 +7,7 @@ const http = require('http');
 const server = http.createServer(app);
 const { MongoStore } = require('wwebjs-mongo');
 const mongoose = require('mongoose');
-const MONGO_URI =
-  'mongodb+srv://shwe:ItTFTpu51Bc6w30A@sales-box.jt5ze.mongodb.net/whatsapp';
+const MONGO_URI = process.env.MONGO_URI;
 mongoose.set('strictQuery', false);
 mongoose.connect(MONGO_URI);
 let sessions = [];
